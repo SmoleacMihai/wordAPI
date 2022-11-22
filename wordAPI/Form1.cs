@@ -66,13 +66,18 @@ namespace wordAPI
                 paragraph.Range.Text = textToExport.Text;
                 Range docRange = doc.Range();
 
-                //using (FontDialog dialog = new FontDialog())
-                //{
-                //    if (dialog.ShowDialog() == DialogResult.OK)
-                //    {
-                //        paragraph.Range.Font = dialog.Font;
-                //    }
-                //}
+                if(radioButton1.Checked)
+                {
+                    paragraph.Range.Font.Name = "Times New Roman";
+                }
+                if(radioButton2.Checked)
+                {
+                    paragraph.Range.Font.Name = "Arial";
+                }
+                if(radioButton3.Checked)
+                {
+                    paragraph.Range.Font.Name = "Comic Sans";
+                }
 
                 if (checkBox1.Checked)
                 {
